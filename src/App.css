@@ -1,38 +1,88 @@
-.App {
+/* 전체 레이아웃 */
+body, html, .container {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: white;
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* 박스 스타일 */
+.box {
+  position: relative;
+  width: 90%;
+  max-width: 720px;
+  border: 1px solid #ddd;
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* 상단 AI powered */
+.ai-powered {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 0.9rem;
+  color: #3b82f6;
+  font-weight: 600;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* 아이콘 */
+.icons {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 2.5rem;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+/* 제목 및 부제목 */
+.title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+/* 버튼 */
+.upload-button {
+  background-color: #3b82f6;
   color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.upload-button:hover {
+  background-color: #2563eb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* 드래그 텍스트 */
+.drag-text {
+  color: #666;
+  margin-top: 12px;
+}
+
+/* 하단 설명 */
+.footer-text {
+  font-size: 0.75rem;
+  color: #999;
+  margin-top: 40px;
 }
